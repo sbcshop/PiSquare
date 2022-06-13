@@ -6,5 +6,5 @@
 
 ## With PiSquare you can make :-
 
-* Create the server from Raspberry Pi and run as many HAT as you like as a client to run multiple HAT.
-  <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif1.gif" />
+* **Create the server from Raspberry Pi and run as many HAT as you like as a client to run multiple HAT.**
+    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif1.gif" />
