@@ -31,6 +31,12 @@
 3. **Status Led**
    Status led is connected to **GP24** Pin of PiSquare
    
+4. **0.91 OLED Display**
+   * Driving IC: SSD1306
+   * Operating Voltage: 3.3-5V
+   * Resolution Ratio: 128 x 32
+   * Text Color: Blue
+   * Background Color: Black
 
 ### With PiSquare you can make :-
 
