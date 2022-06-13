@@ -13,7 +13,7 @@
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img1.png" />
 
 ## Parts specification
-1. ESP-12E(ESP8266MOD)
+1. **ESP-12E(ESP8266MOD)**
     * Wi-Fi 2.4 GHz, support WPA/WPA2
     * Integrated low power 32-bit MCU
     * Operating Current: 80mA
@@ -21,7 +21,7 @@
     * Operating Voltage: 3.0-3.6V
     * Operating temperature range -40C ~ 125C
    
-2. RP2040 Microcontroller IC
+2. **RP2040 Microcontroller IC**
    * Dual ARM Cortex-M0+ @ 133MHz
    * Support for up to 16MB of off-chip Flash memory via dedicated QSPI bus (External flash)
    * 264kB on-chip SRAM in six independent banks
