@@ -15,8 +15,8 @@
 * **Make Moble phone as server and other PiSquare as clients, vice-versa and Run any HAT on single PiSquare and control it via your phone**
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif3.gif" />
     
-* **Create Hotspot on Raspberry Pi and connect PiSquare to raspberry pi (without router)**
+* **Create Hotspot on Raspberry Pi and connect PiSquares to raspberry pi (without router)**
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif4.gif" />
 
-* **Create hotspot on PiSquare and connect PiSquare to other PiSquare (without router)**
+* **Create hotspot on PiSquare and connect PiSquare to other PiSquares (without router)**
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif5.gif" />
