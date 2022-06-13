@@ -28,6 +28,8 @@
    * On-chip programmable LDO to generate the core voltage
    * 2 on-chip PLLs to generate USB and core clocks
   
+3. **Status Led**
+   Status led is connected to **GP24** Pin of PiSquare
    
 
 ### With PiSquare you can make :-
