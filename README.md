@@ -23,7 +23,7 @@
    
 2. **RP2040 Microcontroller IC**
    * Dual ARM Cortex-M0+ @ 133MHz
-   * Support for up to 16MB of off-chip Flash memory via dedicated QSPI bus (External flash)
+   * Support for up to 16MB of off-chip Flash memory via dedicated QSPI bus (External flash W25Q16JVSNIQ)
    * 264kB on-chip SRAM in six independent banks
    * On-chip programmable LDO to generate the core voltage
    * 2 on-chip PLLs to generate USB and core clocks
