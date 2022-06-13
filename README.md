@@ -12,6 +12,24 @@
 
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img1.png" />
 
+## Parts specification
+1. ESP-12E(ESP8266MOD)
+    * Wi-Fi 2.4 GHz, support WPA/WPA2
+    * Integrated low power 32-bit MCU
+    * Operating Current: 80mA
+    * 802.11 b/g/n
+    * Operating Voltage: 3.0-3.6V
+    * Operating temperature range -40C ~ 125C
+   
+2. RP2040 Microcontroller IC
+   * Dual ARM Cortex-M0+ @ 133MHz
+   * Support for up to 16MB of off-chip Flash memory via dedicated QSPI bus
+   * 264kB on-chip SRAM in six independent banks
+   * On-chip programmable LDO to generate the core voltage
+   * 2 on-chip PLLs to generate USB and core clocks
+  
+   
+
 ### With PiSquare you can make :-
 
 * **Create the server from Raspberry Pi and PiSquare as client, run multiple HAT , vice-versa**
