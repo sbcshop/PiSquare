@@ -28,3 +28,21 @@
 
 * **Create hotspot on PiSquare and connect PiSquare to other PiSquares (without router)**
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif5.gif" />
+
+## Setup PiSquare 
+1. Download Thonny IDE 
+
+   https://thonny.org/
+   
+   <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img.JPG" />
+   
+2. In RoundyPi we use both MicroPython and CircuitPython 
+   * Install **Micropython** in Roundypi
+     first you need to press the boot button then connect the USB, don,t release the button until you connect the USB to the laptop. then you see a new device named         "RPI-RP2" drag this file "firmware.uf2" to this device as shown in figure(micropython firmware is inside "Connect_Air_Monitoring_Sensor" folder)
+        <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img13.png" />
+        <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img1.JPG" />
+        
+     After this go to run->select interpreter,choose device and port
+        <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img2.png" />
+        <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img3.png" />
+        <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img4.png" />
