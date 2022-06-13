@@ -37,6 +37,11 @@
    * Resolution Ratio: 128 x 32
    * Text Color: White
    * Background Color: Black
+   
+5. **Three push buttons**
+   * Reset button     (Reset pisquare)
+   * Boot button      (Boot button of RP2040)
+   * ESP Reset button (Reset button of ESP-12E module)
 
 ### With PiSquare you can make :-
 
