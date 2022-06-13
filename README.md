@@ -29,7 +29,7 @@
    * 2 on-chip PLLs to generate USB and core clocks
   
 3. **Status Led**
-   Status led is connected to **GP24** Pin of PiSquare
+   * Status led is connected to **GP24** Pin of PiSquare
    
 4. **0.91 OLED Display**
    * Driving IC: SSD1306
