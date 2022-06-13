@@ -6,7 +6,7 @@
 
 ## With PiSquare you can make :-
 
-* **Create the server from Raspberry Pi and PiSquare as client, run multiple HAT**
+* **Create the server from Raspberry Pi and PiSquare as client, run multiple HAT , vice-versa**
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif1.gif" />
     
 * **Make the PiSquare client and other all PiSquare as server, vice-versa**
@@ -15,5 +15,8 @@
 * **Make Moble phone as server and other PiSquare as clients, vice-versa and Run any HAT on single PiSquare and control it via your phone**
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif3.gif" />
     
-* **Create Hotspot on Raspberry Pi and connect PiSquare to raspberry pi**
+* **Create Hotspot on Raspberry Pi and connect PiSquare to raspberry pi (without router)**
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif4.gif" />
+
+* **Create hotspot on PiSquare and connect PiSquare to other PiSquare (without router)**
+    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif5.gif" />
