@@ -67,7 +67,7 @@
    
    <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img.JPG" />
    
-2. In PiSquare we can use both MicroPython and CircuitPython, but we use micropython
+2. In PiSquare we can use both MicroPython and CircuitPython, but we use micropython (* **use micropython**)
    * Install **Micropython** in PiSquare
      first you need to press the boot button of PiSquare, then connect the USB, don,t release the button until you connect the USB to the laptop. then you see a new        device named "RPI-RP2". 
         <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img13.png" />
