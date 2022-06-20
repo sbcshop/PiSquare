@@ -6,11 +6,11 @@ import random
 
 import utime
 
-WiFi_SSID='PiSquare'  # Wifi_SSID
-WiFi_password = 'pisquare@#123'      # WiFi Password
-port = '80'                    # TCP Server Port
+WiFi_SSID='PiSquare'                 # PiSquare_SSID
+WiFi_password = 'pisquare@#123'      # PiSquare Password
+port = '80'                          # TCP Server Port
 
-uart = UART(1, 115200)           # Default Baud rate
+uart = UART(1, 115200)               # Default Baud rate
 
 WIDTH  = 128                                            # oled display width
 HEIGHT = 32                                             # oled display height
