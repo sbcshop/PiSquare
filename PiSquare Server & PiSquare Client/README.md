@@ -1,6 +1,6 @@
 # PiSQUARE
 
-* **Make the PiSquare client and other all PiSquare as server, vice-versa**
+* **Make the PiSquare client and other all PiSquare as server, vice-versa (With router)**
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif2.gif" />
     
     
