@@ -55,9 +55,7 @@ sendCMD("AT+CWMODE=3","OK")
 sendCMD("AT+CWJAP=\""+WiFi_SSID+"\",\""+WiFi_password+"\"","OK",20000)
 sendCMD("AT+CIFSR","OK")
 sendCMD("AT+CIPSTART=\"TCP\",\""+TCP_ServerIP+"\","+Port,"OK",10000)
-#sendCMD("AT+CIPMODE=1","OK")
-#sendCMD("AT+CIPSEND",">")
-#uart.write('Client')  # Send data to TCP server
+
 print(lst)
 '''
 res = str(lst)[1:-1]
