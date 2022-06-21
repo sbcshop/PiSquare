@@ -1,7 +1,6 @@
 from machine import UART, Pin,SPI,I2C
 from ssd1306 import SSD1306_I2C
 import utime,time
-#import gpio_config  
 import random
 
 import utime
