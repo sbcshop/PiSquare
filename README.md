@@ -43,7 +43,7 @@
    * Boot button      (Boot button of RP2040)
    * ESP Reset button (Reset button of ESP-12E module)
 
-### With PiSquare you can make :-
+### With PiSquare you can do these things :-
 
 * **Create the server from Raspberry Pi and PiSquare as client, run multiple HAT , vice-versa**
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif1.gif" />
