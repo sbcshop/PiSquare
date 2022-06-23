@@ -67,9 +67,7 @@ def accepting_connections():
 def start():
     while True:
         n = input('Enter client name : ')
-        if n == 'list':
-            list_connections()
-        elif 'c' in n:
+        if'c' in n:
             conn = get_target(n)
             if conn is not None:
                 send_target_commands(conn)
