@@ -25,7 +25,7 @@
    * **PiSquare client.apk - This is the mobile application, install the application on your mobile phone( the application act as client) and connect to PiSquare using          wifi, the interface of the app look like below image**
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/app.jpg" />
 
-   * **pisquare_server.py - Run this file in PiSquare, you can change the SSID and Password of the PiSquare like in router we do**
+   * **pisquare_server.py - Run this file in PiSquare, you can change the Port, SSID and Password of the PiSquare like in router we do**
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img5.JPG" />
 
    * **ssd1306.py - This is the library of OLED, save rhis file inside PiSquare, Open Thonny follow below steps :**
