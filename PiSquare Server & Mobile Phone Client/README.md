@@ -7,13 +7,13 @@
 
 ### With Internet Or With Router
 #### Make PiSquare server and Mobile phone as client, with internet , in this case PiSquare and mobile phone connect to router using wifi 
-   * **PiSquare client.apk - This is the mobile application, install the application on your mobile phone( the application act as client) and connect PiSquare and phone        to same network or router,the interface of the app look like below image **
-   <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/app.jpg" />
+  * **PiSquare client.apk - This is the mobile application, install the application on your mobile phone( the application act as client) and connect PiSquare and phone        to same network or router,the interface of the app look like below image **
+  <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/app.jpg" />
 
-   * **pisquare_server.py - Run this file in PiSquare,Write you router SSID and password in this file, as shown in below **
+  * **pisquare_server.py - Run this file in PiSquare,Write you router SSID and password in this file, as shown in below **
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img6.JPG" />
 
-   * ssd1306.py
+  * ssd1306.py
 
 
 ### Without Internet Or Without Router
