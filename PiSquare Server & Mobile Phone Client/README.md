@@ -5,7 +5,7 @@
 ## There are two folders in this repository:
 
 ### With Internet Or With Router
-   * PiSquare client.apk - This is the mobile application, install the application on your mobile phone( the application act as client)
+   * **PiSquare client.apk - This is the mobile application, install the application on your mobile phone( the application act as client)**
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/app.jpg" />
 
    * pisquare_server.py
