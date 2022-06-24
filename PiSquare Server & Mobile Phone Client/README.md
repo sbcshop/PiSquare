@@ -17,13 +17,12 @@
 
 
 ### Without Internet Or Without Router
-   #### Make PiSquare server and Mobile phone as client, without internet, in this case PiSquare create hotspot (AP), and mobile phone connect to PiSquare using wifi 
+#### Make PiSquare server and Mobile phone as client, without internet, in this case PiSquare create hotspot (AP), and mobile phone connect to PiSquare using wifi 
+
    * **PiSquare client.apk - This is the mobile application, install the application on your mobile phone( the application act as client) and connect to PiSquare using        wifi**
-   
-   * PiSquare client.apk
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/app.jpg" />
 
-   * pisquare_server.py
+   * **pisquare_server.py - Run this file in PiSquare, you can change the SSID and Password of the PiSquare like in router**
      <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img5.JPG" />
 
    * ssd1306.py
