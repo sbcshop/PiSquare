@@ -8,16 +8,16 @@
 ## There are two folders in this repository:
 
 ### With Internet Or With Router
-PiSquare client.apk
+   * PiSquare client.apk
 
-pisquare_server.py
+   * pisquare_server.py
 
-ssd1306.py
+   * ssd1306.py
 
 
 ### Without Internet Or Without Router
-PiSquare client.apk
+   * PiSquare client.apk
 
-pisquare_server.py
+   * pisquare_server.py
 
-ssd1306.py
+   * ssd1306.py
