@@ -37,3 +37,4 @@
 ## Application and Working
 
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img11.png" />
+<img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img12.png" />
