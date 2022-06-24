@@ -1,11 +1,12 @@
 # PiSQUARE
+
 * **Make Moble phone as server and other PiSquare as clients, vice-versa (with and without  router)**
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif3.gif" />
     
 ## There are two folders in this repository:
 
 ### With Internet Or With Router
-   #### Make PiSquare server and Mobile phone as client, with internet , in this case PiSquare and mobile phone connect to router using wifi 
+#### Make PiSquare server and Mobile phone as client, with internet , in this case PiSquare and mobile phone connect to router using wifi 
    
    * **PiSquare client.apk - This is the mobile application, install the application on your mobile phone( the application act as client) and connect PiSquare and phone        to same network or router **
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/app.jpg" />
