@@ -11,7 +11,7 @@
    * **PiSquare client.apk - This is the mobile application, install the application on your mobile phone( the application act as client) and connect PiSquare and phone        to same network or router,the interface of the app look like below image**
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/app.jpg" />
 
-   * pisquare_server.py
+   * **pisquare_server.py - Run this file in PiSquare,**
 
    * ssd1306.py
 
