@@ -9,10 +9,15 @@
 
 ### With Internet Or With Router
 PiSquare client.apk
+
 pisquare_server.py
+
 ssd1306.py
+
 
 ### Without Internet Or Without Router
 PiSquare client.apk
+
 pisquare_server.py
+
 ssd1306.py
