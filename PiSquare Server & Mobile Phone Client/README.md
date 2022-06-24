@@ -4,4 +4,6 @@
     
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/app.jpg" />
 
-With Internet Or With Router
+
+## With Internet Or With Router
+## Without Internet Or Without Router
