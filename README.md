@@ -101,3 +101,6 @@
 ## Demo Codes
 * **Led Blink code(led_blink.py)**
   * Control on board status led of PiSquare ( blue color led) 
+  
+* **pisquare_internal_temp.py**
+  * See PiSquare internal temperature
