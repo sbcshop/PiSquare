@@ -57,7 +57,9 @@ def ReceiveData():
             return ID,data
     return None,None
 
+uart.write('+++')
 time.sleep(1)
+if(uart.any()>0):uart.read()
 sendCMD("AT","OK")
 sendCMD("AT+CWMODE=3","OK")
 sendCMD("AT+CWJAP=\""+WiFi_SSID+"\",\""+WiFi_password+"\"","OK",20000)
