@@ -12,6 +12,10 @@
 
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img3.png" />
 
+## PiSquare Pins
+
+<img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img4.JPG" />
+
 ## Parts
 
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img1.png" />
