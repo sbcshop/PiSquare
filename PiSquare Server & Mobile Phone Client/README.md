@@ -5,7 +5,7 @@
     
 ## There are two folders in this repository:
 
-1. ### With Internet Or With Router
+### 1. With Internet Or With Router
 #### Make PiSquare server and Mobile phone as client, with internet , in this case PiSquare and mobile phone connect to router using wifi 
   * **PiSquare client.apk - This is the mobile application, install the application on your mobile phone( the application act as client) and connect PiSquare and phone        to same network or router,the interface of the app look like below image **
   <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/app.jpg" />
@@ -20,7 +20,7 @@
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img8.png" />
 
 
-### Without Internet Or Without Router
+### 2. Without Internet Or Without Router
 #### Make PiSquare server and Mobile phone as client, without internet, in this case PiSquare create hotspot (AP), and mobile phone connect to PiSquare using wifi 
    * **PiSquare client.apk - This is the mobile application, install the application on your mobile phone( the application act as client) and connect to PiSquare using          wifi, the interface of the app look like below image**
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/app.jpg" />
