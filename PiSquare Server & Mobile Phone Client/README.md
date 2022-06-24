@@ -40,5 +40,5 @@
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img12.png" />
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img11.png" />
 
-## We can send data from Mobile to PiSquare
+### We can send data from Mobile to PiSquare
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img14.jpg" />
