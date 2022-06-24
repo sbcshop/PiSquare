@@ -24,4 +24,8 @@
    * **pisquare_server.py - Run this file in PiSquare, you can change the SSID and Password of the PiSquare like in router we do**
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img5.JPG" />
 
-   * ssd1306.py
+   * ssd1306.py - This is the library of OLED, save rhis file inside PiSquare,  like this :
+    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img7.png" />
+    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img10.png" />
+    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img9.png" />
+    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img8.png" />
