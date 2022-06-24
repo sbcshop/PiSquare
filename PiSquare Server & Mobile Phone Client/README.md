@@ -6,7 +6,7 @@
 
 ### With Internet Or With Router
    * PiSquare client.apk
-     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/app.jpg" />
+   <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/app.jpg" />
 
    * pisquare_server.py
 
