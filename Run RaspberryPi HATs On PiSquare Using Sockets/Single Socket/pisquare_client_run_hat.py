@@ -101,13 +101,18 @@ while True:
                 if Mode == 'R':
                     uart_1 = gpio_config.UART_Pin_Read(device)
                     print(uart_1)
-                    uart.write(uart_1)
+                    if uart_1 is None:
+                        uart.write("try again")
+                    else:
+                        uart.write(uart_1)
                 
                 if Mode == 'W':
                     Data = p[3]
                     uart_1 = gpio_config.UART_Pin_Write(Data)
-                    print(uart_1)
-                    uart.write(uart_1)
+                    if uart_1 is None:
+                        uart.write("try again")
+                    else:
+                        uart.write(uart_1)
                     
             if pin_mode == 'I2C':
                 pin_mode = p[0]
@@ -135,8 +140,11 @@ while True:
                     Address  = p[3]
                     addr = int(Address, 16)
                     Data     = p[4]
-                    i2c_1 = gpio_config.I2C_Pin_Write(Freq,addr,Data) 
-                    uart.write('done')  # Send data to TCP server
+                    i2c_1 = gpio_config.I2C_Pin_Write(Freq,addr,Data)
+                    if i2c_1 is None:
+                        uart.write("try again")
+                    else:
+                        uart.write('done')
                     
             if pin_mode == 'SPI':
                 Mode     = p[1]
@@ -145,19 +153,19 @@ while True:
                 if Mode == 'R':
                     spi_1 = gpio_config.SPI_Pin_Read(device)
                     print(spi_1)
-                    uart.write(spi_1)  # Send data to TCP server
+                    if spi_1 is None:
+                        uart.write("try again")
+                    else:
+                        uart.write(spi_1)
 
                 
                 if Mode == 'W':
                     Data = str(p[3])
                     spi_1 = gpio_config.SPI_Pin_Write(device,Data)
                     print(spi_1)
-                    uart.write(spi_1)  # Send data to TCP server
+                    if spi_1 is None:
+                        uart.write("try again")
+                    else:
+                        uart.write(spi_1)
                     
                     
-
-
-
-
-
-
