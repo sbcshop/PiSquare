@@ -3,7 +3,6 @@ import sys
 import threading
 import time
 from queue import Queue
-import config_protocol
 
 port = 12420
 
