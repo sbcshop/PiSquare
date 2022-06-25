@@ -1,7 +1,6 @@
-# Use thonny ide to program pico
-# Use Hercules SETUP utility for TCP server and client https://www.hw-group.com/software/hercules-setup-utility
-# Make sure both WiFi HAT and TCP Server are connected on same network
-
+# Use thonny ide to program PiSquare
+# This code is server, and mobile application is client
+# Code made by sbcomponents
 from machine import UART, Pin,SPI,I2C
 import utime,time
 from ssd1306 import SSD1306_I2C
@@ -137,6 +136,11 @@ while True:
             print("relay 5 off")
             oled.fill(0)
             oled.show()
+
+            
+
+
+
 
             
 
