@@ -6,9 +6,9 @@ from machine import UART, Pin,SPI,I2C
 import utime,time
 from ssd1306 import SSD1306_I2C
 
-WiFi_SSID='Tech SB_2G'               # Enter Wifi SSID here
-WiFi_password = 'jc643111h@'           # Enter WiFi Password here
-Port = '8080'                        # TCP Server Port
+WiFi_SSID='PiSquare'                 # PiSquare_SSID
+WiFi_password = 'pisquare@#123'      # PiSquare Password
+port = '8080'                        # TCP Server Port
 
 uart = UART(1, 115200)              # Default Baud rate of ESP8266
 
@@ -73,23 +73,16 @@ def ReceiveData():
 uart.write('+++')
 time.sleep(1)
 if(uart.any()>0):uart.read()
-sendCMD("AT","OK")
-sendCMD("AT+CWMODE=3","OK")
-sendCMD("AT+CWJAP=\""+WiFi_SSID+"\",\""+WiFi_password+"\"","OK",20000)
-sendCMD("AT+CIPMUX=1","OK")
-sendCMD("AT+CIPSERVER=1,"+Port,"OK")
+sendCMD("AT+RST","OK")
+time.sleep(1)
+sendCMD("AT+CWMODE=2","OK")
 sendCMD("AT+CIFSR","OK")
+sendCMD("AT+CWSAP?","OK")
+sendCMD("AT+CIPMUX=1","OK")
+sendCMD("AT+CIPSERVER=1,"+port,"OK")
+sendCMD("AT+CWSAP=\""+WiFi_SSID+"\",\""+WiFi_password+"\",2,3,4,0","OK")#+CWSAP: "ssid", "pwd", "chl", "ecn", "maxconnection", "ssidhidden 0- non hide,1-for hidden"
+sendCMD("AT+CWLIF","OK")
 
-res = str(lst)[1:-1]
-x = res.split(",")
-x = x[3].replace('"',"")
-x = x.split("+")
-r = x[0][:-4]
-print(r)
-oled.text(r,10,20)
-oled.show()
-time.sleep(2)
-oled.fill(0)
 while True:
     Connection_ID,data=ReceiveData()
     if(Connection_ID != None):
