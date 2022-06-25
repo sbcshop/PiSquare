@@ -1,5 +1,7 @@
 # PiSQUARE
-## In this repisitory we control raspberry Pi hats, through (wifi) TCP Protocol.Raspberry pi Hats are fix(connect) to PiSqure.
+## In this repository we control raspberry Pi hats, through (wifi) TCP Protocol.Raspberry pi Hats are fix(connect) to PiSqure.
+### Let's talk about how whole thing work, Connect PiSquare(having pi Hat's) to Raspberry pi using wifi.Then we control raspberry pi HAT(client)'s using raspberry pi (server), here we use socket programming.Make sure all the HAT'S which has library,need to save inside the PiSquare.You can add as many library.
+
 * **Create the server from Raspberry Pi and PiSquare as client, run multiple HAT , vice-versa (with router)**
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif1.gif" />
     
