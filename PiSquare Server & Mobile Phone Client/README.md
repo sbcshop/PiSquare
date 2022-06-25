@@ -35,6 +35,8 @@
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img8.png" />
 
 ## Application and Working
+## Run This file in PiSquare to make home automation
+ * pisquare_homeautomation_app_control.py
 ### Home Automation
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img13.png" />
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img12.png" />
