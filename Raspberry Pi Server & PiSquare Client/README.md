@@ -7,7 +7,7 @@
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif4.gif" />
     
     
-## Install necessary libraries :
+## Install necessary libraries in Raspberry Pi :
 ```pip install sockets```
 
 **or**
