@@ -5,9 +5,9 @@ import random
 
 import utime
 
-WiFi_SSID='PiSquare'  # Wifi_SSID
-WiFi_password = 'pisquare@#123'      # WiFi Password
-port = '80'                    # TCP Server Port
+WiFi_SSID='PiSquare'             # PiSquare Wifi_SSID
+WiFi_password = 'pisquare@#123'  # PiSquare WiFi Password
+port = '80'                      # PiSquare TCP Server Port(make sure server and client port are same)
 
 uart = UART(1, 115200)           # Default Baud rate
 
