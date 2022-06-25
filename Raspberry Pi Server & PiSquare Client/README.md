@@ -7,6 +7,11 @@
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif4.gif" />
     
     
+## Install necessary libraries :
+```pip install sockets```
+
+```sudo apt-get install socket```
+
 ## There are two folders in this repository:  
 #### In Single socket, you can connect one client to the server(Raspberri pi), and send ,receive data
 ### 1. Single socket
