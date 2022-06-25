@@ -12,10 +12,10 @@ import vga1_bold_16x32 as font
 
 WiFi_SSID='Tech SB_2G'  # Wifi_SSID
 WiFi_password = 'jc643111h@'      # WiFi Password
-TCP_ServerIP = '192.168.29.73'   # IP of Computer on which TCP server is running
+TCP_ServerIP = '192.168.29.73'    # Raspberry pi IP Address
 Port = '12420'                    # TCP Server Port
 
-uart = UART(1, 115200)           # Default Baud rate
+uart = UART(1, 115200)            # Default Baud rate
 
 WIDTH  = 128                                            # oled display width
 HEIGHT = 32                                             # oled display height
