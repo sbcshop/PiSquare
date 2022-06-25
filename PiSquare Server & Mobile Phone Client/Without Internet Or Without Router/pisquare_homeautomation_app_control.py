@@ -89,9 +89,6 @@ while True:
         sendData(Connection_ID,data) #Send received data back to TCP Server
         oled.text(data,10,20)
         oled.show()
-        #time.sleep(2)
-        #oled.fill(0)
-        #oled.show()
         print("data =",data)   # Print Received data
         print(list(data))
         if data == "Relay1_ON":
