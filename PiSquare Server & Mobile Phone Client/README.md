@@ -12,7 +12,9 @@
 
   * **pisquare_server.py - Run this file in PiSquare,Write you router SSID and password in this file, as shown in below **
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img6.JPG" />
-
+  
+  * **pisquare_homeautomation_app_control.py - Run This file in PiSquare to make home automation ** 
+     
   * **ssd1306.py - This is the library of OLED, save rhis file inside PiSquare, Open Thonny follow below steps :**
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img7.png" />
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img10.png" />
@@ -27,7 +29,9 @@
 
    * **pisquare_server.py - Run this file in PiSquare, you can change the Port, SSID and Password of the PiSquare like in router we do**
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img5.JPG" />
-
+   
+   * **pisquare_homeautomation_app_control.py - Run This file in PiSquare to make home automation ** 
+   
    * **ssd1306.py - This is the library of OLED, save rhis file inside PiSquare, Open Thonny follow below steps :**
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img7.png" />
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img10.png" />
@@ -35,8 +39,6 @@
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img8.png" />
 
 ## Application and Working
-## Run This file in PiSquare to make home automation
- * pisquare_homeautomation_app_control.py
 ### Home Automation
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img13.png" />
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img12.png" />
