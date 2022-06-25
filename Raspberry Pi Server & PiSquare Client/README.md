@@ -26,8 +26,6 @@
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img8.png" />
 
 
-
-
 ### 2. Multiple Sockets
 #### In multiple sockets, you can connect many client to the server(Raspberri pi), and send ,receive data simultaneously
    * **raspberrypi_server_sockets.py - Run this file in Raspberry pi(server),Connect the raspberry pi to the router, make sure both PiSquare and raspberry pi connect to same          network**
@@ -37,3 +35,9 @@
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img10.png" />
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img9.png" />
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img8.png" />
+
+## Working 
+### Single Client
+<img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img17.png" />
+### Multiple Clients
+<img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img18.png" />
