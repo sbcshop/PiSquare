@@ -103,4 +103,4 @@
   * Control on board status led of PiSquare ( blue color led) 
   
 * **pisquare_internal_temp.py**
-  * See PiSquare internal temperature
+  * Run this code to see PiSquare internal temperature
