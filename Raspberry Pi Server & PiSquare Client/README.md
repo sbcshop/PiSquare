@@ -8,6 +8,7 @@
     
     
 ## There are two folders in this repository:  
+#### In Single socket, you can connect one client to the server(Raspberri pi), and send ,receive data
 ### 1. Single socket
    * **raspberryPi_server.py - Run this file in Raspberry pi,Connect the raspberry pi to the router, make sure both PiSquare and raspberry pi connect to same network**
    * **pisquare_client.py - Run the file to PiSquare to make client, connect client to the router** 
@@ -21,7 +22,7 @@
 
 
 ### 2. Multiple Sockets
-#### In multiple socket, you can connect many client to the server, and send ,receive data simultaneously
+#### In multiple sockets, you can connect many client to the server(Raspberri pi), and send ,receive data simultaneously
    * **raspberrypi_server_sockets.py - Run this file in Raspberry pi,Connect the raspberry pi to the router, make sure both PiSquare and raspberry pi connect to same          network**
    * **pisquare_client.py - Run the file to PiSquare to make client, connect client to the router** 
    * **ssd1306.py - This is the library of OLED, save rhis file inside PiSquare, Open Thonny follow below steps :**
