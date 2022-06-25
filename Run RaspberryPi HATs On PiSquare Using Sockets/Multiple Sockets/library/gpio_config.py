@@ -4,37 +4,37 @@ import pmsa003
 import machine
 import utime,time
 import gc9a01
-
+import sdcard
 import utime
 import italicc
-
+import os
 import vga1_bold_16x32 as font
 #gp23 reserved
 
 def Digital_Pin_Read(gp_pin):
     if gp_pin =='GPIO17':
-            GPIO14 = machine.Pin(7, machine.Pin.IN)
-            GPIO14.value()
+            GPIO17 = machine.Pin(7, machine.Pin.IN)
+            return GPIO17.value()
             
     if gp_pin =='GPIO4':
-            GPIO14 = machine.Pin(6, machine.Pin.IN)
-            GPIO14.value()
+            GPIO4 = machine.Pin(6, machine.Pin.IN)
+            return GPIO4.value()
             
     if gp_pin =='GPIO21':
-            GPIO14 = machine.Pin(12, machine.Pin.IN)
-            GPIO14.value()
+            GPIO21 = machine.Pin(12, machine.Pin.IN)
+            return GPIO21.value()
             
     if gp_pin =='GPIO8':
-            GPIO14 = machine.Pin(9, machine.Pin.IN)
-            GPIO14.value()
+            GPIO8 = machine.Pin(9, machine.Pin.IN)
+            return GPIO8.value()
             
     if gp_pin =='GPIO14':
             GPIO14 = machine.Pin(0, machine.Pin.IN)
             return GPIO14.value()
                     
     elif gp_pin =='GPIO15':
-            GPIO10 = machine.Pin(1, machine.Pin.IN)
-            return GPIO10.value()        
+            GPIO15 = machine.Pin(1, machine.Pin.IN)
+            return GPIO15.value()        
                
     elif gp_pin =='GPIO11':
             GPIO11 = machine.Pin(10, machine.Pin.IN)
@@ -115,20 +115,20 @@ def Digital_Pin_Read(gp_pin):
 
 def Digital_Pin_Write(gp_pin,state):
     if gp_pin =='GPIO17':
-            GPIO14 = machine.Pin(7, machine.Pin.OUT)
-            GPIO14.value(int(state))
+            GPIO17 = machine.Pin(7, machine.Pin.OUT)
+            GPIO17.value(int(state))
             
     if gp_pin =='GPIO4':
-            GPIO14 = machine.Pin(6, machine.Pin.OUT)
-            GPIO14.value(int(state))
+            GPIO4 = machine.Pin(6, machine.Pin.OUT)
+            GPIO4.value(int(state))
             
     if gp_pin =='GPIO21':
-            GPIO14 = machine.Pin(12, machine.Pin.OUT)
-            GPIO14.value(int(state))
+            GPIO21 = machine.Pin(12, machine.Pin.OUT)
+            GPIO21.value(int(state))
             
     if gp_pin =='GPIO8':
-            GPIO14 = machine.Pin(9, machine.Pin.OUT)
-            GPIO14.value(int(state))
+            GPIO8 = machine.Pin(9, machine.Pin.OUT)
+            GPIO8.value(int(state))
             
     if gp_pin =='GPIO14':
             GPIO14 = machine.Pin(0, machine.Pin.OUT)
@@ -232,6 +232,15 @@ def UART_Pin_Read(device):
         utime.sleep(1)    
         reading = sensor.read()    
         return " pm10: {:d} pm25: {:d} pm100: {:d}" .format(reading.pm10_cf1, reading.pm25_cf1, reading.pm100_cf1)
+    
+    elif device == "rfid_hat":
+         rfid = UART(0,baudrate = 9600,tx = Pin(0),rx = Pin(1))
+         for i in range(2):
+            data_Read = rfid.readline(12)#read data comming from other pico lora expansion
+            if data_Read is not None:
+                data=data_Read.decode("utf-8")
+                return data
+            time.sleep(2)
     else:
         return 'wrong device'
 
@@ -259,9 +268,9 @@ def I2C_Pin_Write(Freq,Address,Data):
         return 'wrong address'
 
     
-def SPI_Pin_Write(lcd,data):
+def SPI_Pin_Write(device,data):
     spi = SPI(1, baudrate=40000000, sck=Pin(10), mosi=Pin(11))
-    if lcd == 'lcd1.3':
+    if device == 'lcd1.3':
         tft = st7789.ST7789(spi,240,240,reset=Pin(8, Pin.OUT),cs=Pin(5, Pin.OUT),dc=Pin(22, Pin.OUT),backlight=Pin(26, Pin.OUT),rotation=1)#SPI interface for tft screen
         tft.init()
         time.sleep(0.5)#time delay
@@ -270,7 +279,7 @@ def SPI_Pin_Write(lcd,data):
         return 'done'
 
         
-    if lcd == 'lcd1.28':
+    if device == 'lcd1.28':
         tft = gc9a01.GC9A01(spi,240,240,reset=Pin(8, Pin.OUT),cs=Pin(9, Pin.OUT),dc=Pin(22, Pin.OUT),backlight=Pin(26, Pin.OUT),rotation=2)
         tft.init()
         tft.rotation(3)
@@ -278,11 +287,57 @@ def SPI_Pin_Write(lcd,data):
         utime.sleep(0.5)
         tft.text(font, data, 20, 50, gc9a01.RED)
         return 'done'
+    
+    if device == 'sdcard':
+        def sdtest(data):
+            spi=SPI(1,sck=Pin(10),mosi=Pin(11),miso=Pin(12))
+            sd=sdcard.SDCard(spi,Pin(9))
+            vfs = os.VfsFat(sd)
+            os.mount(vfs, "/fc")
+            print("Filesystem check")
+            
+            print(os.listdir("/fc"))
+
+            fn = "/fc/File.txt"
+            print()
+            print("Single block write")
+            with open(fn, "a") as f:
+                n = f.write(data)
+                print(n, "bytes written")
+                da = str(n)+' bytes written'
+                print("da = ",da)
+                return da
+            os.umount("/fc")
+    
+        sd=sdtest(data+'\n')
+        return sd
+        
     else:
         return 'wrong device'
 
+def SPI_Pin_Read(device):
+        if device == 'sdcard':
+            def sdtest():
+                spi=SPI(1,sck=Pin(10),mosi=Pin(11),miso=Pin(12))
+                sd=sdcard.SDCard(spi,Pin(9))
+                vfs = os.VfsFat(sd)
+                os.mount(vfs, "/fc")
+                print("Filesystem check")
+                
+                print(os.listdir("/fc"))
 
+                fn = "/fc/File.txt"
+                print()
+                print("Single block read")
+                with open(fn, "r") as f:
+                    result2 = f.read()
+                    print(len(result2), "bytes read")
+                    return result2
 
-
-
-
+                os.umount("/fc")
+            d = sdtest()
+            return d
+                
+        else:
+            return 'wrong device'
+        
