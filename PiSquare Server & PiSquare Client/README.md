@@ -30,6 +30,7 @@
   * **pisquare_client.py - Run the file to PiSquare to make client.Connect client to PiSquare (server)** 
    * **pisquare_server.py - Run this file in PiSquare,PiSquare create hotspot (AP). you can change the Port, SSID and Password of the PiSquare like in router we do**
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img5.JPG" />
+   
    * **ssd1306.py - This is the library of OLED, save rhis file inside PiSquare, Open Thonny follow below steps :**
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img7.png" />
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img10.png" />
