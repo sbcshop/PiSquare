@@ -35,3 +35,8 @@
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img10.png" />
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img9.png" />
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img8.png" />
+   
+   
+   ## Working 
+   <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img16.png" />
+      <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img15.png" />
