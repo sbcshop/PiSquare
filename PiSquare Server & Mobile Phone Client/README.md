@@ -34,8 +34,8 @@
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img9.png" />
    <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img8.png" />
 
-## Application and Working (Home Automation etc.)
-
+## Application and Working
+### Home Automation
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img13.png" />
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img12.png" />
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img11.png" />
