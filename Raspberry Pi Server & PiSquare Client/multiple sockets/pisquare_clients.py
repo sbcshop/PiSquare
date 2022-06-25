@@ -2,9 +2,9 @@ from machine import UART, Pin,SPI,I2C
 import utime,time
 from ssd1306 import SSD1306_I2C
 
-WiFi_SSID='Tech SB_2G'  # Wifi_SSID
-WiFi_password = 'jc643111h@'      # WiFi Password
-TCP_ServerIP = '192.168.29.73'  # IP of pisquare on which TCP server is running
+WiFi_SSID='Tech SB_2G'          # Wifi_SSID
+WiFi_password = 'jc643111h@'    # WiFi Password
+TCP_ServerIP = '192.168.29.73'  # Raspberry pi IP Address
 Port = '12420'                  # TCP Server Port (you can change)
 
 uart = UART(1,115200)           # Default Baud rate
