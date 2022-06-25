@@ -1,5 +1,5 @@
 # PiSQUARE
-
+## In this repisitory we control raspberry Pi hats, through (wifi) TCP Protocol.Raspberry pi Hats are fix(connect) to PiSqure.
 * **Create the server from Raspberry Pi and PiSquare as client, run multiple HAT , vice-versa (with router)**
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif1.gif" />
     
