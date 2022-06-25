@@ -9,7 +9,8 @@
     
 ## Install necessary libraries :
 ```pip install sockets```
-or
+
+**or**
 
 ```sudo apt-get install socket```
 
