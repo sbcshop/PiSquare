@@ -16,19 +16,19 @@
 
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img4.JPG" />
 
-## PiSquare Pin Function
-<img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img23.JPG" />
-
 ## Parts
+
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img1.png" />
 
-## PiSquare Operating Conditions
- * Operating Temp Max 85°C (including self-heating)
- * Operating Temp Min -20°C
- * VBUS 5V ± 10%.
- * VSYS Min 1.8V
- * VSYS Max 5.5V
+## About PiSquare
+  * RP2040 microcontroller with 2MB Flash
+  * USB Type C port for power and data (and for reprogramming the Flash)
+  * Exposes 25 multi-function 3.3V General Purpose I/O (GPIO)
+  * 22 GPIO are digital-only and 3 are ADC capable
 
+
+
+  * 
 ## Parts specification
 1. **ESP-12E(ESP8266MOD)**
     * Wi-Fi 2.4 GHz, support WPA/WPA2
@@ -83,13 +83,8 @@
    https://thonny.org/
    
    <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img.JPG" />
-2- **Programming the Flash - The on-board 2MB QSPI Flash can be (re)programmed either using the Serial Wire Debug port or by the special USB
-   Mass Storage Device mode**
-   **The simplest way to reprogram the PiSquare’s Flash is to use the USB mode. To do this, depower the board, then hold the
-   BOOTSEL button down during board power-up (e.g. hold BOOTSEL down while connecting the USB). The PiSquare will then
-   appear as a USB Mass Storage Device. Dragging a special '.uf2'(micropython and circuitpython etc) file onto the disk will write this file to the Flash and
-   restart the PiSquare.**
- In PiSquare we can use both MicroPython and CircuitPython, but we use micropython ( **use micropython** * )
+   
+2. In PiSquare we can use both MicroPython and CircuitPython, but we use micropython ( **use micropython** * )
    * Install **Micropython** in PiSquare
      first you need to press the boot button of PiSquare, then connect the USB, don,t release the button until you connect the USB to the laptop. then you see a new        device named "RPI-RP2". 
         <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img13.png" />
