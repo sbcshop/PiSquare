@@ -6,10 +6,12 @@ import utime,time
 import gc9a01
 import sdcard
 import utime
-import italicc
 import os
+import st7789
 import vga1_bold_16x32 as font
-#gp23 reserved
+from ina219 import INA219
+from logging import INFO
+from ssd1306 import SSD1306_I2C
 
 def Digital_Pin_Read(gp_pin):
     if gp_pin =='GPIO17':
@@ -235,28 +237,158 @@ def UART_Pin_Read(device):
     
     elif device == "rfid_hat":
          rfid = UART(0,baudrate = 9600,tx = Pin(0),rx = Pin(1))
+         WIDTH  = 128                                            # oled display width
+         HEIGHT = 32                                             # oled display height
+
+            #i2c = I2C(0)                                            # Init I2C using I2C0 defaults, SCL=Pin(GP9), SDA=Pin(GP8), freq=400000
+         i2c = I2C(0,freq=200000,sda=Pin(20),scl=Pin(21))
+         print(i2c)
+         print("I2C Address      : "+hex(i2c.scan()[0]).upper()) # Display device address
+         print("I2C Configuration: "+str(i2c))                   # Display I2C config
+
+         oled = SSD1306_I2C(WIDTH, HEIGHT, i2c)                  # Init oled display
+
+         oled.fill(0)
+         oled.text("RFID HAT",30,5)
+         oled.show()
+         time.sleep(2)
+         oled.fill(0)
+         oled.show()
          for i in range(2):
             data_Read = rfid.readline(12)#read data comming from other pico lora expansion
             if data_Read is not None:
                 data=data_Read.decode("utf-8")
+                oled.text(data,5,5)
+                oled.show()
+                print(data)
+                time.sleep(2)
+                oled.fill(0)
+                oled.show()
                 return data
             time.sleep(2)
+            
+    elif device == "barcode_hat":
+            barcode = UART(0,baudrate = 9600,tx = Pin(0),rx = Pin(1))
+            
+            spi = SPI(1, baudrate=40000000, sck=Pin(10), mosi=Pin(11))
+            tft = st7789.ST7789(spi,135,240,reset=Pin(8, Pin.OUT),cs=Pin(9, Pin.OUT),dc=Pin(22, Pin.OUT),backlight=Pin(26, Pin.OUT),rotation=1)#SPI interface for tft screen
+            def info():
+                tft.init()
+                time.sleep(0.5)#time delay
+               
+                tft.text(font,"RASPBERRY-PI", 10,10,st7789.YELLOW)# print on tft screen
+                tft.fill_rect(0, 50, 240,10, st7789.RED)#display red line on tft screen
+                
+                tft.text(font,"BARCODE-HAT", 10,70 ,st7789.GREEN)
+                tft.fill_rect(0, 105, 240,10, st7789.RED)
+
+            info()
+            time.sleep(4)
+            tft.fill(0)
+            data_Read = barcode.readline()#read data comming from other pico lora expansion
+            for i in range(2): 
+                if data_Read:
+                      if '\r' in data_Read:
+                        data=data_Read.decode("utf-8")
+                        tft.text(font,data, 0,50 ,st7789.GREEN)
+                        tft.fill_rect(0, 95, 240,10, st7789.RED)
+                        return data[:-1]
+            
+                time.sleep(2)
+
+    elif device == 'gps_hat':
+                gps = UART(0,baudrate = 9600,tx = Pin(0),rx = Pin(1))
+                def convert_to_degrees(raw_value):
+                    decimal_value = raw_value/100.00
+                    degrees = int(decimal_value)
+                    mm_mmmm = (decimal_value - int(decimal_value))/0.6
+                    position = degrees + mm_mmmm
+                    position = "%.4f" %(position)
+                    return position
+
+                def RMC_Read():
+                            data = "$GNRMC,"
+                            info = data
+                            received_data = (str)(gps.read()) #read NMEA string received
+                            data_available = received_data.find(info)
+                            if (data_available>0):
+                                buffer = received_data.split(data,1)[1]  #store data coming 
+                                buff = (buffer.split(','))
+                                nmea_time = []
+                                nmea_latitude = []
+                                nmea_longitude = []
+                                date = []
+                                speed_over_ground = []
+                                nmea_time = buff[0]
+                                speed_over_ground = buff[6]#extract time from GPGGA string
+                                nmea_latitude = buff[2]              
+                                nmea_longitude = buff[4]
+                                date = buff[8]
+                                lat = (float)(nmea_latitude)
+                                lat = convert_to_degrees(lat)
+                                longi = (float)(nmea_longitude)
+                                longi = convert_to_degrees(longi)                
+                                return lat,longi,nmea_time,speed_over_ground,date
+                            
+                for _ in range(1000):
+                  x = RMC_Read() #Recommended minimum specific GNSS data
+                  if x is not None:
+                                a = list(x)
+                                print("Latitude = ",a[0] + "    Longitude = ",a[1])
+                                print("UTC Time = ",a[2])
+                                print("Date = ",a[4])
+                                print("speed over ground = ",a[3])
+                                print("\n")
+                                return "Latitude = "+str(a[0]) + "    Longitude = "+str(a[1]) + "  UTC Time = "+str(a[2])+ "  Date = "+str(a[4])
+                                time.sleep(0.2)
+                                break
+    
     else:
         return 'wrong device'
-
-             
+    
 def UART_Pin_Write(Baudrate,data):
     uart1 = UART(0,baudrate = Baudrate,tx = Pin(0),rx = Pin(1))
     val = uart1.write(data)#send data
     return val
  
 
-def I2C_Pin_Read(Freq):
-    i2c = I2C(0,scl=Pin(21), sda=Pin(20), freq=Freq)#I2C
-    #print("I2C Address      : "+hex(i2c.scan()[0]).upper())
-    i2c_1 = i2c.scan()
-    return i2c_1
+def I2C_Pin_Read(device):
+    sda=machine.Pin(20)
+    scl=machine.Pin(21)
+    i2c=machine.I2C(0,sda=sda, scl=scl, freq=400000)
+   
+    if device == "power_hat":
+        SHUNT_OHMS = 0.1
+        addr1=0x40
+        addr2=0x41
+        addr3=0x42
+        
+        lst = []
+        
+        ina1 = INA219(SHUNT_OHMS, i2c,addr1,log_level=INFO)
+        ina2 = INA219(SHUNT_OHMS, i2c,addr2,log_level=INFO)
+        ina3 = INA219(SHUNT_OHMS, i2c,addr3,log_level=INFO)
 
+        ina1.configure()
+        ina2.configure()
+        ina3.configure()
+        
+        print("Bus Voltage 1: %.3f V" % ina1.voltage(),"Current 1: %.3f mA" % ina1.current(),"Power 1: %.3f mW" % ina1.power())
+
+        print("Bus Voltage 2: %.3f V" % ina2.voltage(),"Current 2: %.3f mA" % ina2.current(),"Power 2: %.3f mW" % ina2.power())
+
+        print("Bus Voltage 3: %.3f V" % ina3.voltage(),"Current 3: %.3f mA" % ina3.current(),"Power 3: %.3f mW" % ina3.power())
+        
+        f1 = "Bus Voltage 1: %.3f V" % ina1.voltage(),"Current 1: %.3f mA" % ina1.current(),"Power 1: %.3f mW" % ina1.power()
+        f2 = "Bus Voltage 2: %.3f V" % ina2.voltage(),"Current 2: %.3f mA" % ina2.current(),"Power 2: %.3f mW" % ina2.power()
+        f3 = "Bus Voltage 3: %.3f V" % ina3.voltage(),"Current 3: %.3f mA" % ina3.current(),"Power 3: %.3f mW" % ina3.power()
+        
+        lst.append(f1)
+        lst.append(f2)
+        lst.append(f3)
+        
+        return lst
+               
 def I2C_Pin_Write(Freq,Address,Data):
     if Address == 0x27:
         i2c = I2C(0,scl=Pin(21), sda=Pin(20), freq=Freq)#I2C
@@ -279,16 +411,14 @@ def SPI_Pin_Write(device,data):
         return 'done'
 
         
-    if device == 'lcd1.28':
-        tft = gc9a01.GC9A01(spi,240,240,reset=Pin(8, Pin.OUT),cs=Pin(9, Pin.OUT),dc=Pin(22, Pin.OUT),backlight=Pin(26, Pin.OUT),rotation=2)
-        tft.init()
-        tft.rotation(3)
+    elif device == 'lcd1.28':
+        tft = gc9a01.GC9A01(spi,reset=Pin(8, Pin.OUT),cs=Pin(9, Pin.OUT),dc=Pin(22, Pin.OUT),backlight=Pin(26, Pin.OUT),rotation=0)
         tft.fill(gc9a01.BLACK)
         utime.sleep(0.5)
         tft.text(font, data, 20, 50, gc9a01.RED)
         return 'done'
     
-    if device == 'sdcard':
+    elif device == 'sdcard':
         def sdtest(data):
             spi=SPI(1,sck=Pin(10),mosi=Pin(11),miso=Pin(12))
             sd=sdcard.SDCard(spi,Pin(9))
@@ -340,4 +470,3 @@ def SPI_Pin_Read(device):
                 
         else:
             return 'wrong device'
-        
