@@ -27,7 +27,7 @@
   * RP2040 microcontroller with 2MB Flash
   * USB Type C port for power and data (and for reprogramming the Flash)
   * Exposes 25 multi-function 3.3V General Purpose I/O (GPIO)
-  * 22 GPIO are digital-only and 3 are ADC capable
+  * 21 GPIO are digital-only and 3 are ADC capable
 
 ## Operating Condition
  * Operating Temp Max 85°C (including self-heating)
