@@ -8,7 +8,7 @@
 
 #### You can utilise PiSquare in a variety of ways, as we were previously limited to utilising a single HAT on the Raspberry Pi or a maximum of three Raspberry Pi HATs using PiStack, but you can't link the same HATs on it twice (Like more than two UART or SPI based Raspberry Pi HAT at the same time) PiSquare allows you to attach as many HATs as you like to your Raspberry Pi without stacking them, whether they're SPI, I2C, or SPI HATs, and you can control them all wirelessly.
 
-## PiSquare pins configuration is same as Raspberry pi pins configuration (like UART, I2C and SPI are in same place)
+## PiSquare pins configuration is same as Raspberry pi pins configuration (like UART, I2C and SPI are in same place, so we can raspberry pi HAT'S in PiSquare)
 
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img3.png" />
 
