@@ -18,6 +18,7 @@
 
 ## PiSquare Pins Function
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img23.JPG" />
+
 ## Parts
 
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img1.png" />
@@ -28,7 +29,13 @@
   * Exposes 25 multi-function 3.3V General Purpose I/O (GPIO)
   * 22 GPIO are digital-only and 3 are ADC capable
 
-
+## Operating Condition
+ * Operating Temp Max 85°C (including self-heating)
+ * Operating Temp Min -20°C
+ * VBUS 5V ± 10%.
+ * VSYS Min 1.8V
+ * VSYS Max 5.5V
+ 
 ## Parts specification
 1. **ESP-12E(ESP8266MOD)**
     * Wi-Fi 2.4 GHz, support WPA/WPA2
