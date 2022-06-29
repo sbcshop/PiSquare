@@ -16,6 +16,8 @@
 
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img4.JPG" />
 
+## PiSquare Pins Function
+<img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img23.JPG" />
 ## Parts
 
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img1.png" />
@@ -27,8 +29,6 @@
   * 22 GPIO are digital-only and 3 are ADC capable
 
 
-
-  * 
 ## Parts specification
 1. **ESP-12E(ESP8266MOD)**
     * Wi-Fi 2.4 GHz, support WPA/WPA2
