@@ -16,8 +16,10 @@
 
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img4.JPG" />
 
-## Parts
+## PiSquare Pin Function
+<img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img23.JPG" />
 
+## Parts
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img1.png" />
 
 ## Parts specification
