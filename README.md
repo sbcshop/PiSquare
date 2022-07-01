@@ -136,4 +136,5 @@
   <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img25.jpg" />
 
 * **lcd_display_16x2_demo**
-Inside this folder there is a file name "lcd_16x2"
+  * Inside this folder there is a file name "lcd_16x2_test.py", run this file to use 16x2 I2C Lcd, before this save library of the display(lcd_api.py and pico_i2c_lcd)     inside PiSquare
+  <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img26.jpg" />
