@@ -1,7 +1,7 @@
 import time
 from machine import Pin, PWM
 
-pwm = PWM(Pin(6)) # servo motor data pin(orange wire or yellow wire) is connected to GP6 pin of PiSquare
+pwm = PWM(Pin(8)) # servo motor data pin(orange wire or yellow wire) is connected to GP8 pin of PiSquare
 pwm.freq(50)
 
 while True:
