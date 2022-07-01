@@ -134,3 +134,6 @@
 * **servo_motor.py**
   * Run this code to test servo motor
   <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img25.jpg" />
+
+* **lcd_display_16x2_demo**
+Inside this folder there is a file name "lcd_16x2"
