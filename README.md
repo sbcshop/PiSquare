@@ -85,6 +85,7 @@
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif5.gif" />
 
 ## Setup PiSquare 
+### It Support C/C++, MicroPython and circuitpython
 1. Download Thonny IDE 
 
    https://thonny.org/
