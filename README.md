@@ -130,3 +130,7 @@
 * **oled_test.py**
   * Run this code to use onboard OLED, before this you need to save the library of OLED inside PiSquare(ssd1306.py)
   <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img24.jpg" />
+
+* **servo_motor.py**
+  * Run this code to test servo motor
+  <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img25.jpg" />
