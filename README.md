@@ -121,3 +121,9 @@
   
 * **pisquare_internal_temp.py**
   * Run this code to see PiSquare internal temperature
+  
+* **ldr.py** 
+  * Run this code to see light intensity (connect LDR to pisquare)
+  <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img27.jpg" />
+  <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img28.jpg" />
+  
