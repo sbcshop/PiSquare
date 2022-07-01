@@ -135,12 +135,9 @@ def send_target_commands(conn):
                         b = int(input("Enter your choice = "))
 
                         if b == 1:
-                            x = input("Enter frequency  = ")
-                            y = int(input("Enter address  = "))
-                            add = str(hex(y))
-                            z = input("Enter data  = ")
-                            
-                            i2c_w = config_protocol.I2C_Socket.I2C_Write(x,add,z)
+                            x = input("Enter Device ")
+                            y = int(input("Enter Data  = "))                            
+                            i2c_w = config_protocol.I2C_Socket.I2C_Write(x,y)
                             print(i2c_w)
                             conn.send(i2c_w.encode()) # Send data to clients
                             print('\n')
@@ -148,8 +145,8 @@ def send_target_commands(conn):
                             print('\n')
 
                         if b == 2:
-                            w = input("Enter frequency  = ")
-                            i2c_r = config_protocol.I2C_Socket.I2C_Read(w)
+                            r = input("Enter Device  = ")
+                            i2c_r = config_protocol.I2C_Socket.I2C_Read(r)
                             print(i2c_r)
                             conn.send(i2c_r.encode()) # Send data to clients
                             print('\n')
@@ -162,7 +159,7 @@ def send_target_commands(conn):
                     y = int(input("Enter your choice = "))
                     
                     if y == 1:
-                        x = input("Enter baudrate  = ")
+                        x = input("Enter Device = ")
                         y = input("Enter data  = ")
                         uart_w = config_protocol.UART_Socket.UART_Write(x,y)
                         conn.send(uart_w.encode()) # Send data to clients
@@ -172,7 +169,6 @@ def send_target_commands(conn):
                         
                     if y == 2:
                         x = input("Enter device  = ")
-
                         uart_r = config_protocol.UART_Socket.UART_Read(x)
                         conn.send(uart_r.encode()) # Send data to clients
                         print('\n')
@@ -195,7 +191,6 @@ def send_target_commands(conn):
                         
                     if y == 2:
                         x = input("Enter device  = ")
-
                         spi_r = config_protocol.SPI_Socket.SPI_Read(x)
                         conn.send(spi_r.encode()) # Send data to clients
                         print('\n')
