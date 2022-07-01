@@ -1,7 +1,6 @@
 from machine import Pin, I2C, UART
 import utime
-
-from ssd1306 import SSD1306_I2C
+from ssd1306 import SSD1306_I2C # save this library in PiSquare
 
 WIDTH  = 128                                            # oled display width
 HEIGHT = 32                                             # oled display height
