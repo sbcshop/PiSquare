@@ -4,18 +4,15 @@ import utime,time
 import gpio_config  
 import random
 from machine import Pin, SPI
-
-import utime
-import italicc
-                
+import utime        
 import vga1_bold_16x32 as font
 
 WiFi_SSID='Tech SB_2G'  # Wifi_SSID
 WiFi_password = 'jc643111h@'      # WiFi Password
-TCP_ServerIP = '192.168.29.73'    # Raspberry pi IP Address
+TCP_ServerIP = '192.168.29.73'   # IP of Computer on which TCP server is running
 Port = '12420'                    # TCP Server Port
 
-uart = UART(1, 115200)            # Default Baud rate
+uart = UART(1, 115200)           # Default Baud rate
 
 WIDTH  = 128                                            # oled display width
 HEIGHT = 32                                             # oled display height
@@ -27,7 +24,7 @@ print("I2C Configuration: "+str(i2c))
 
 oled = SSD1306_I2C(WIDTH, HEIGHT, i2c)                  # Init oled display
 oled.fill(0)
-oled.text("Client 1",30,0)
+oled.text("Client",30,0)
 oled.show()
 ######## Function to send or receive commands and data
 
@@ -117,30 +114,37 @@ while True:
             if pin_mode == 'I2C':
                 pin_mode = p[0]
                 Mode     = p[1]
-                Freq     = int(p[2])
+                device     = p[2]
                 
                 if Mode == 'R':
-                    i2c_1 = gpio_config.I2C_Pin_Read(Freq) 
+                    i2c_1 = gpio_config.I2C_Pin_Read(device) 
                     print(i2c_1)
-                    #uart.write(i2c_1)  # Send data to TCP server
+                    #uart.write(str(i2c_1))  # Send data to TCP server
+                    '''
                     if len(i2c_1) == 0:
                           print("No i2c device !")
                           uart.write('No i2c device')
                     else:
                          print('i2c devices found:',len(i2c_1))
+                    '''
+                    if i2c_1 is None:
+                        uart.write("try again")
+                    else:
+                        uart.write(str(i2c_1))
                     
-                    x = "".join(str(i2c_1))
-                    res = x[1:-1]
-                    print(res)
-                    uart.write(res)
+                    #x = "".join(str(i2c_1))
+                    #res = x[1:-1]
+                    #print(res)
+                    #uart.write(res)
                          
 
                     
                 if Mode == 'W':
-                    Address  = p[3]
-                    addr = int(Address, 16)
-                    Data     = p[4]
-                    i2c_1 = gpio_config.I2C_Pin_Write(Freq,addr,Data)
+                    device = p[2]
+                    #Address  = p[2]
+                    #addr = int(Address, 16)
+                    Data     = p[3]
+                    i2c_1 = gpio_config.I2C_Pin_Write(device,Data)
                     if i2c_1 is None:
                         uart.write("try again")
                     else:
@@ -167,5 +171,4 @@ while True:
                         uart.write("try again")
                     else:
                         uart.write(spi_1)
-                    
                     
