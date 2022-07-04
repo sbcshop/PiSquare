@@ -7,3 +7,4 @@
     
  * Holding down the PiSquare BOTSEL button while dragging this file into the mounted RP2 folder will allow you to load it.
 
+## barcode_hat.py - run this file
