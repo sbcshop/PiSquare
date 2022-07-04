@@ -8,3 +8,6 @@
  * Holding down the PiSquare BOTSEL button while dragging this file into the mounted RP2 folder will allow you to load it.
 
 ## zero_barcode_hat.py - Run this file
+
+<img src = "https://github.com/sbcshop/PiSquare/blob/main/Run%20raspberry%20HAT's%20on%20PiSquare/images/img16.jpg" />
+<img src = "https://github.com/sbcshop/PiSquare/blob/main/Run%20raspberry%20HAT's%20on%20PiSquare/images/img17.jpg" />
