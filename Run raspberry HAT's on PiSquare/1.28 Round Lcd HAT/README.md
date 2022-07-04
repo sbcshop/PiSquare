@@ -11,6 +11,7 @@
 ## round_lcd_1_28.py - Run this file to start lcd hat
 
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/Run%20raspberry%20HAT's%20on%20PiSquare/images/img14.jpg" />
+<img src = "https://github.com/sbcshop/PiSquare/blob/main/Run%20raspberry%20HAT's%20on%20PiSquare/images/img15.jpg" />
 
 ### orignal product github link:-
 https://github.com/sbcshop/Round-LCD-HAT
