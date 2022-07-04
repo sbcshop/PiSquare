@@ -7,3 +7,5 @@
  * vga1_bold_16x16.py
  * vga1_8x16.py
  * vga1_16x16.py
+
+## round_lcd_1_28.py - Run this file to start lcd hat
