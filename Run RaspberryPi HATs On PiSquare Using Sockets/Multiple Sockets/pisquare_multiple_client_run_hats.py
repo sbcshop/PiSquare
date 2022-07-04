@@ -56,7 +56,6 @@ while True:
     sendCMD("AT+CIPSTART=\"TCP\",\""+TCP_ServerIP+"\","+Port,"OK",10000)
     sendCMD("AT+CIPMODE=1","OK")
     a = sendCMD("AT+CIPSEND",">")
-    #uart.write('client 2')  # Send data to TCP server
     if a == True:
         break
  
@@ -91,7 +90,6 @@ while True:
             
             if pin_mode == 'UART':
                 pin_mode = p[0]
-                #Baudrate = int(p[1])
                 Mode     = p[1]
                 device     = p[2]
                 
@@ -131,18 +129,11 @@ while True:
                         uart.write("try again")
                     else:
                         uart.write(str(i2c_1))
-                    
-                    #x = "".join(str(i2c_1))
-                    #res = x[1:-1]
-                    #print(res)
-                    #uart.write(res)
-                         
+                                         
 
                     
                 if Mode == 'W':
                     device = p[2]
-                    #Address  = p[2]
-                    #addr = int(Address, 16)
                     Data     = p[3]
                     i2c_1 = gpio_config.I2C_Pin_Write(device,Data)
                     if i2c_1 is None:
