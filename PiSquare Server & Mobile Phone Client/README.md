@@ -12,7 +12,7 @@
   <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/app.jpg" />
 
   * **pisquare_server.py - Run this file in PiSquare,Write you router SSID and password in this file, as shown in below **
-   <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img6.JPG" />
+  <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img6.JPG" />
   
   * **pisquare_homeautomation_app_control.py - Run This file in PiSquare to make home automation ** 
      
