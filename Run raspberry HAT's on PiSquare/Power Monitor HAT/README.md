@@ -4,3 +4,7 @@
 ### logging.py -  this is the library of logging, save this file in PiSquare
 ### power_monitor_hat.py -  Run this file
 
+
+### orignal product github link:-
+https://github.com/sbcshop/Power-Monitor-HAT
+
