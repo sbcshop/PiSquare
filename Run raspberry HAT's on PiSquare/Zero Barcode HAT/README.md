@@ -1,4 +1,4 @@
-# Run Raspberry pi HAT's on PiSquare 
+# Run Raspberry Zero Barcode HAT's on PiSquare 
 
 ## Uploading the ST7789 Python Firmware (we already mention in this repository)
  * The firmware includes frozen python font files and pre-compiled objects with the st7789 C driver for a variety of devices.
@@ -7,3 +7,4 @@
     
  * Holding down the PiSquare BOTSEL button while dragging this file into the mounted RP2 folder will allow you to load it.
 
+## zero_barcode_hat.py - Run this file
