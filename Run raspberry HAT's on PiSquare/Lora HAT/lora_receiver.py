@@ -1,7 +1,7 @@
 #Receiver code
-
 from machine import UART, Pin,SPI,I2C
 import time
+
 lora = UART(0,baudrate = 9600,tx = Pin(0),rx = Pin(1))
 
 while 1:
