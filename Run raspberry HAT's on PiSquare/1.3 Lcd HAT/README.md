@@ -7,5 +7,8 @@
     
  * Holding down the PiSquare BOTSEL button while dragging this file into the mounted RP2 folder will allow you to load it.
 
+<img src = "https://github.com/sbcshop/PiSquare/blob/main/Run%20raspberry%20HAT's%20on%20PiSquare/images/img0.jpg" />
+<img src = "https://github.com/sbcshop/PiSquare/blob/main/Run%20raspberry%20HAT's%20on%20PiSquare/images/img1.jpg" />
+
 ### orignal product github link:-
 https://github.com/sbcshop/1.3-LCD-HAT
