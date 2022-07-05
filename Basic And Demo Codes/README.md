@@ -10,8 +10,8 @@
   <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img27.jpg" />
   <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img28.png" />
   
-* **oled_test.py**
-  * Run this code to use onboard OLED, before this you need to save the library of OLED inside PiSquare(ssd1306.py)
+* **Onboard OLED Test**
+  * Inside this folder there is a file name "oled_test.py "Run this code to use onboard OLED, before this you need to save the library of OLED inside                      PiSquare(ssd1306.py)
   <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img24.jpg" />
 
 * **servo_motor.py**
