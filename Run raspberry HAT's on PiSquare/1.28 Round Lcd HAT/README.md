@@ -8,7 +8,7 @@
  * vga1_8x16.py
  * vga1_16x16.py
  
-## If you insert this firmware "firmware.uf2", you do not need to save font library in PiSquare(inside this firmware micropythonlatest version is already there)
+## If you insert this firmware "firmware.uf2", you do not need to save font library, which we mention above in PiSquare(inside this firmware micropythonlatest version is already there)
 
 ## round_lcd_1_28.py - Run this file to start lcd hat
 
