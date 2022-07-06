@@ -346,8 +346,8 @@ def UART_Pin_Read(device):
     else:
         return 'wrong device'
     
-def UART_Pin_Write(Baudrate,data):
-    uart1 = UART(0,baudrate = Baudrate,tx = Pin(0),rx = Pin(1))
+def UART_Pin_Write(data):
+    uart1 = UART(0,baudrate = 9600,tx = Pin(0),rx = Pin(1))
     val = uart1.write(data)#send data
     return val
  
@@ -472,4 +472,3 @@ def SPI_Pin_Read(device):
                 
         else:
             return 'wrong device'
-        
