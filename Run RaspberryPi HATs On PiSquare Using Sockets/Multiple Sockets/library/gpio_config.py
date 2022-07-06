@@ -392,9 +392,9 @@ def I2C_Pin_Read(device):
        return 'wrong device'
                
 def I2C_Pin_Write(device,Data):
-    if Address == 0x27:
+    if device == "16x2_lcd":
         i2c = I2C(0,scl=Pin(21), sda=Pin(20))#I2C
-        lcd = I2cLcd(i2c, Address, 2, 16)
+        lcd = I2cLcd(i2c, 0x27, 2, 16)
         lcd.move_to(0,0)
         lcd.putstr(Data)
         return 'done'
