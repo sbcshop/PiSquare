@@ -1,9 +1,9 @@
 # PiSquare Demo Code
 * **Blink LEDs (led_blink.py)**
-  * Control the onboard blue status LED on the PiSquare
+  * Control the onboard blue status LED on the PiSquare by running "led_blink.py"
   
 * **PiSquare Internal Temperature (pisquare_internal_temp.py)**
-  * See PiSquare internal temperature
+  * See PiSquare internal temperature using "pisquare_internal_temp.py"
   
 * **Light Dependant Resistor (ldr.py)** 
   * Measure the relative resistance of an LDR connected to the PiSquare, using the circuit shown below. The resistor is 10kOhms. The circuit is known as a 'voltage divider'
@@ -28,11 +28,13 @@
   * Run the server_motor.py code.
 
 * **16x2 LCD Display (lcd_display_16x2_demo.py)**
+
   * As with the inbuilt OLED screen, you need to install a couple of libraries. Using the same method as before, install the "pico_i2c_lcd" and "lcd_api" libraries (NOTE: PyPi library names required).
   * Load and run "lcd_16x2_test.py"
   
   <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img26.jpg" />
   
 * **Measuring the relative resistance of a potentiometer (potentiometer_test.py)**
+
   * Use the same circuit as the LDR, but replace the LDR with a potentiometer.
   * Run "potentiometer_test.py"
