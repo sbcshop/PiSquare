@@ -125,7 +125,9 @@ For MicroPython/CircuitPython
      
      In Thonny, select Run->Select Interpreter.  Choose the 'CircuitPython (generic)' interpreter and the port the PiSquare is attached to.
      
-         <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img18.png" />
-         <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img19.png" />
-         <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img20.png" />
+     <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img18.png" />
+     
+     <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img19.png" />
+     
+     <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img20.png" />
     
