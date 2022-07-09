@@ -98,16 +98,19 @@ For MicroPython/CircuitPython
 2. The PiSquare we can use both MicroPython and CircuitPython, but in these instructions we use MicroPython
 
    * Installing **MicroPython** on the PiSquare
+
      Before connecting the PiSquare to your PC, press and hold the Boot button, then connect the USB.  Don't release the button until you connect the USB your PC. Release the Boot button once you see a new 'drive' named "RPI-RP2".
      
         <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img13.png" />
         
      In Thonny, select Run->Select Interpreter.  Choose the 'MicroPython (Raspberry Pi Pico)' interpreter, the port the PiSquare is attached to, and click on 'Install or update firmware'.
+     
         <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img2.png" />
         <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img3.png" />
         <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img4.png" />
         
    * Installing **CircuitPython** on the PiSquare
+   
       Download the AdaFruit CircuitPython firmware from here: https://circuitpython.org/board/raspberry_pi_pico/
    
       Before connecting the PiSquare to your PC, press and hold the Boot button, then connect the USB.  Don't release the button until you connect the USB your PC. Release the Boot button once you see a new 'drive' named "RPI-RP2".
@@ -117,6 +120,7 @@ For MicroPython/CircuitPython
      <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img13.png" />
 
      The PiSquare will restart and a new 'drive' connected:
+     
      <img src= "https://github.com/sbcshop/RoundyPi/blob/main/images/img11.png" />
      
      In Thonny, select Run->Select Interpreter.  Choose the 'CircuitPython (generic)' interpreter and the port the PiSquare is attached to.
