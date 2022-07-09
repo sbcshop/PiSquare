@@ -29,7 +29,9 @@
 
 * **16x2 LCD Display (lcd_display_16x2_demo.py)**
 
-  * As with the inbuilt OLED screen, you need to install a couple of libraries. Using the same method as before, install the "pico_i2c_lcd" and "lcd_api" libraries (NOTE: PyPi library names required).
+  * As with the inbuilt OLED screen, you need to install a couple of libraries. These are not currently available from PyPi, so you are going to use the alternative method of installing libraries.
+  * In Thonny, open both "pico_i2c_lcd.py" and "lcd_api.py", then use File->Save Copy...  This will present a dialog box allowing you to choose between saving to your local computer or "Raspberry Pi Pico". Choose the Pico.
+  * Save the files into the "lib" folder with their current names.
   * Load and run "lcd_16x2_test.py"
   
   <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img26.jpg" />
