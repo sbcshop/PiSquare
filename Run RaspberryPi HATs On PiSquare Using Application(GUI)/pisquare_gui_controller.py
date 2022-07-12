@@ -117,47 +117,12 @@ def Client_Socket():
                                  bg="white", fg="black",
                                  bd=2, height=18, width=22, padx=10, pady=10)
                     rx_label.place(x=80, y=385)
-                    '''
-                    #print("asd = ", asd)
-                    res = list(eval(ad))
-                    resq = list(ad)
-                    print("res= ",res)
-                    print("resq = ",resq)
-                    for i in range(len(res)):
-                        res1 = str(res[i])[1:-1]
-                        print("res1 = ",res1)
-                        x = res1.split(",")
-                        x = x[0].replace("'", "")
-                        print(x)
-                        lst.append(x)
-                    print("lst1",lst)
-                    '''
-                    '''
-                    helv25 = tkFont.Font(family='Helvetica', size=25)
-                    global comm_Option5
-                    comm_Variable5 = tk.StringVar()
-                    
-                    comm_Variable5.set("Choose Client")
-                    comm_Option5 = tk.OptionMenu(root, comm_Variable5,*lst)
-                    comm_Option5.config(font=helv25)
-                    comm_Option5.config(bg='violet')
-
-                    helv16 = tkFont.Font(family='Helvetica', size=16)
-                    menu = root.nametowidget(comm_Option5.menuname)
-                    menu.config(font=helv16)  # Set the dropdown menu's font
-                    comm_Option5.place(x=420,y=300,width=270,height=40)
-
-                    print("Connection has been established :" + address[0])
-                    '''
-
 
                     return ad
                 except:
                     print("Error accepting connections")
 
-                print("####### = ",all_address)
         def start_control():
-            print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
             asd = accepting_connections()
             
             print("asd = ", asd)
@@ -179,7 +144,6 @@ def Client_Socket():
                                  bd=2, height=18, width=22, padx=10, pady=10)
             rx_label.place(x=80, y=385)
             
-            print("lst1***",set(lst))
             helv25 = tkFont.Font(family='Helvetica', size=25)
             comm_Variable5 = tk.StringVar()
 
@@ -196,7 +160,6 @@ def Client_Socket():
             
             def set_text():
                             n = comm_Variable5.get()
-                            print("***n******* = ",n)
                             conn = get_target(n)
                             if conn is not None:
                                         send_target_commands(conn)
