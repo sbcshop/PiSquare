@@ -248,13 +248,12 @@ def UART_Pin_Read(device):
 
          oled = SSD1306_I2C(WIDTH, HEIGHT, i2c)                  # Init oled display
 
-         oled.fill(0)
          oled.text("RFID HAT",30,5)
          oled.show()
          time.sleep(2)
          oled.fill(0)
          oled.show()
-         for i in range(2):
+         while 1:
             data_Read = rfid.readline(12)#read data comming from other pico lora expansion
             if data_Read is not None:
                 data=data_Read.decode("utf-8")
@@ -265,6 +264,7 @@ def UART_Pin_Read(device):
                 oled.fill(0)
                 oled.show()
                 return data
+                break
             time.sleep(2)
             
     elif device == "barcode_hat":
@@ -283,17 +283,19 @@ def UART_Pin_Read(device):
                 tft.fill_rect(0, 105, 240,10, st7789.RED)
 
             info()
-            time.sleep(4)
+            time.sleep(2)
             tft.fill(0)
-            data_Read = barcode.readline()#read data comming from other pico lora expansion
-            for i in range(2): 
+            while 1:
+                data_Read = barcode.readline()#read data comming from other pico lora expansion
                 if data_Read:
-                      if '\r' in data_Read:
-                        data=data_Read.decode("utf-8")
-                        tft.text(font,data, 0,50 ,st7789.GREEN)
-                        tft.fill_rect(0, 95, 240,10, st7789.RED)
-                        return data[:-1]
-            
+                          if '\r' in data_Read:
+                            data=data_Read.decode("utf-8")
+                            tft.text(font,data, 0,50 ,st7789.GREEN)
+                            tft.fill_rect(0, 95, 240,10, st7789.RED)
+                            return data[:-1]
+                            break
+                            
+                
                 time.sleep(2)
 
     elif device == 'gps_hat':
@@ -330,7 +332,7 @@ def UART_Pin_Read(device):
                                 longi = convert_to_degrees(longi)                
                                 return lat,longi,nmea_time,speed_over_ground,date
                             
-                for _ in range(1000):
+                while 1:
                   x = RMC_Read() #Recommended minimum specific GNSS data
                   if x is not None:
                                 a = list(x)
@@ -405,7 +407,7 @@ def I2C_Pin_Write(device,Data):
 def SPI_Pin_Write(device,data):
     spi = SPI(1, baudrate=40000000, sck=Pin(10), mosi=Pin(11))
     if device == 'lcd1.3':
-        tft = st7789.ST7789(spi,240,240,reset=Pin(8, Pin.OUT),cs=Pin(5, Pin.OUT),dc=Pin(22, Pin.OUT),backlight=Pin(26, Pin.OUT),rotation=1)#SPI interface for tft screen
+        tft = st7789.ST7789(spi,240,240,reset=Pin(8, Pin.OUT),cs=Pin(9, Pin.OUT),dc=Pin(22, Pin.OUT),backlight=Pin(26, Pin.OUT),rotation=1)#SPI interface for tft screen
         tft.init()
         time.sleep(0.5)#time delay
         tft.text(font,data, 10,40,st7789.YELLOW)# print on tft screen
