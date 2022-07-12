@@ -1,4 +1,5 @@
 """
+Created by SB COMPONENTS
 """
 from tkinter import*
 try:
