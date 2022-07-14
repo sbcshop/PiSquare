@@ -2,6 +2,8 @@
 
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img29.png" />
 
+### This application gives easy to interface(user friendly) to control PiSquare
+
 ### SPI Control
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img30.png" />
 
