@@ -12,7 +12,7 @@
 
 <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/img3.png" />
 
-### In PiSquare Pin 16 is Not Connected, it Means Those Hat which Uses GPIO23 Pin In Raspberry Pi
+## In PiSquare Pin 16 is Not Connected, it Means Those Hat which Uses GPIO23 Pin In Raspberry Pi
 
 ## PiSquare Pins
 
