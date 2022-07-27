@@ -72,7 +72,8 @@
 ## ESP8266 AT Commands
 https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf
 or 
-we upload the 
+we upload the ESP8266_AT_Instruction_set.pdf, kindly go through this pdf
+
 
 ### With PiSquare you can do these things :-
 
