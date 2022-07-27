@@ -69,6 +69,11 @@
    * Boot button      (Boot button of RP2040)
    * ESP Reset button (Reset button of ESP-12E module)
 
+## ESP8266 AT Commands
+https://www.espressif.com/sites/default/files/documentation/4a-esp8266_at_instruction_set_en.pdf
+or 
+we upload the 
+
 ### With PiSquare you can do these things :-
 
 * **Create the server from Raspberry Pi and PiSquare as client, run multiple HAT , vice-versa**
