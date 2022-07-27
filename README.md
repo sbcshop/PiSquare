@@ -75,7 +75,7 @@
 ### we upload the ESP8266_AT_Instruction_set.pdf, kindly go through this pdf
 
 
-### With PiSquare you can do these things :-
+## With PiSquare you can do these things :-
 
 * **Create the server from Raspberry Pi and PiSquare as client, run multiple HAT , vice-versa**
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif1.gif" />
