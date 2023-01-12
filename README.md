@@ -92,7 +92,7 @@
 * **Create hotspot on PiSquare and connect PiSquare to other PiSquares (without router)**
     <img src = "https://github.com/sbcshop/PiSquare/blob/main/images/gif5.gif" />
 
-## Setup PiSquare 
+## Setup PiSquare (we already installed Micropython in PiSquare * )
 ### It Support C/C++, MicroPython and circuitpython
 1. Download Thonny IDE 
 
